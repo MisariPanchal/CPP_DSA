@@ -54,7 +54,7 @@ int main(){
     }
     cout << endl;
 
-    //copying other vector 
+    //copying elements of other vector 
     vector<int> v5 = {100,200,300,400};
     vector<int> copy = {5,5};
 
@@ -96,7 +96,7 @@ int main(){
     }
     cout << endl;
 
-    //v.clear()
+    //clearing a vector
     v7.clear();
 
     cout << "Vector7 after clear() : ";

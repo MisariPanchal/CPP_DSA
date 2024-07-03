@@ -1,9 +1,8 @@
 /*
-Increasing Letter Triangle
 
-A
-A B
-A B C
+D
+C D
+B C D
 A B C D
 
 */
@@ -11,10 +10,10 @@ A B C D
 #include<bits/stdc++.h>
 using namespace std;
 
-void nLetterTriangle(int n) {
-    char ch = 'A';
+void alphaTriangle(int n) {
     for(int i = 0; i < n; i++){
-        for(char j = ch; j <= ch+i; j++){
+    char ch = 'A';
+        for(char j = 'A' + (n-i-1); j <= 'A' + (n-1); j++){
             cout << j << " ";
         }
         cout << endl;
@@ -30,5 +29,5 @@ int main()
 
     int num;
     cin >> num;
-    nLetterTriangle(num);
+    alphaTriangle(num);
 }
