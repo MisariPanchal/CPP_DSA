@@ -15,13 +15,15 @@ int main(){
     dsa_set.insert(3);
     dsa_set.insert(23);
     dsa_set.emplace(10);
+    dsa_set.emplace(11);
 
     //returns an iterator pointing element 3
     auto it1 = dsa_set.find(3);
 
     //if the set does not contain the element it returns garbage value
     auto it2 = dsa_set.find(9);
-    cout << "If element not present (garbage value) : " << *it2 <<endl;
+    // cout << "If element not present (garbage value) : " << *it1 <<endl;
+    cout << "If element not present (total num of elements) : " << *it2 <<endl;
 
     cout << "Unique elements of set : ";
     for(int it : dsa_set){
@@ -55,7 +57,6 @@ int main(){
     cout << endl;
 
     //lower_bound() and upper_bound()
-
     auto it3 = dsa_set1.lower_bound(2);
     cout << "Lower bound of 2 which is not present in set : " << *it3 << endl;
     it3 = dsa_set1.upper_bound(2);

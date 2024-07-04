@@ -1,3 +1,1 @@
-List after adding elements front and back : 9,10,1,2,4,2,5,
-List after popping elements front and back : 10,1,2,4,2,
-List after inserting elements : 10,40,40,1,2,4,2,
+Unordered Map Elements : {3,2}, {8,2}, {4,2}, {10,2}, {1,2}, 

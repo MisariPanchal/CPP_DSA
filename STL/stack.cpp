@@ -12,12 +12,15 @@ int main(){
 
     stack<int> st1;
 
+    //Adding elements
     st1.push(3);
     st1.push(9);
     st1.push(7);
     st1.push(7);
     st1.emplace(5);
 
+    //Top element of stack
+    cout << "Top element of st1 : " <<st1.top() << endl;
     
     //Size of stack 
     cout << "Size of st1 : " << st1.size() << endl;

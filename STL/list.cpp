@@ -9,6 +9,7 @@ int main(){
 
     list<int> ls = {1,2,4};
 
+    //Adding elements
     ls.push_back(2);
     ls.emplace_back(5);
 
@@ -21,6 +22,10 @@ int main(){
     }
     cout << endl;
 
+    cout << "Back : " << ls.back() << endl;
+    cout << "Front : " << ls.front() << endl;
+
+    //Removing elements
     ls.pop_back();
     ls.pop_front();
 
@@ -34,7 +39,7 @@ int main(){
     auto it = ls.begin();
 
     //it++ kato begin()+1 ni jagya e aavu karay
-    advance(it, 1);
+    advance(it, 2);
     ls.insert(it, 2, 40);
 
     cout << "List after inserting elements : ";

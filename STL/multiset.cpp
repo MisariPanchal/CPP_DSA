@@ -35,7 +35,6 @@ int main(){
     cout << endl;
 
     //Erasing only 1 occurance of an element
-
     ms.erase(ms.find(2));
 
     cout << "Erasing only 1 occurance of 2 : ";

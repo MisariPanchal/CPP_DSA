@@ -10,6 +10,7 @@ int main(){
     //By default the pq is max heap i.e. largest element on top
     priority_queue<int> pq1;
 
+    //Adding elements
     pq1.push(6);
     pq1.push(3);
     pq1.push(35);
