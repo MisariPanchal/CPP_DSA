@@ -1,5 +1,2 @@
-1
-2
-0
-2
-5
+The highest frequency element is: 32
+The lowest frequency element is: 1

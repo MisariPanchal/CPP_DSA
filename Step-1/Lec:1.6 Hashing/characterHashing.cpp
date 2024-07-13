@@ -14,24 +14,47 @@ int main()
     freopen("../../output.txt", "w", stdout);
 #endif
 
+  //string has only lowercase alphabets
+
+  // string str;
+  // cin >> str;
+
+   //precompute
+  // int hasharr[26] = {0};
+  // for(int i = 0; i < str.length(); i++){
+  //   hasharr[str[i] - 'a']++;
+  // }
+
+  // int q;
+  // cin >> q;
+
+  // while(q--){
+  //   char ch;
+  //   cin >> ch;
+
+  //   //fetch
+  //   cout << hasharr[ch - 'a'] << endl;
+  // }
+
+  //Any character
+
   string str;
   cin >> str;
 
-   //precompute
-  int hasharr[26] = {0};
+  //precompute
+  int hasharr[256] = {0};
   for(int i = 0; i < str.length(); i++){
-    hasharr[str[i] - 'a']++;
+    hasharr[str[i]]++;
   }
 
   int q;
   cin >> q;
-
   while(q--){
     char ch;
     cin >> ch;
 
-    //fetch
-    cout << hasharr[ch - 'a'] << endl;
+    //fetch;
+    cout << hasharr[ch] << endl;
   }
   
     return 0;

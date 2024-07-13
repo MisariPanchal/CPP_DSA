@@ -1,9 +1,9 @@
 //Brute Force Approach
 
+
 #include <bits/stdc++.h>
 using namespace std;
 
-// int hasharr[1000000000];
 
 int main()
 {
@@ -21,21 +21,21 @@ int main()
     }
 
     //precompute
-    // int hasharr[10000000] = {0};
-    int hasharr[13] = {0};
+    map<int, int> hashmap;
     for(int i = 0; i < n; i++){
-      hasharr[arr[i]]++;
+      hashmap[arr[i]]++;
     }
 
     int q;
     cin >> q;
-    for(int i = 0; i < q; i++){
+    while(q--){
       int number;
       cin >> number;
 
       //fetch
-      cout << hasharr[number] << endl;
+      cout << hashmap[number] << endl;
     }
     
+
     return 0;
 }
