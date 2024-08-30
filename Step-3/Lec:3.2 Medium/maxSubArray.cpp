@@ -2,34 +2,59 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-vector<int> maxSubArray(vector<int>& nums) {
-        int len = nums.size();
-        int maxSum = INT_MIN, sum = 0;
-        int startS = -1, endS = -1, strt = 0;
+vector<int> maxSubArray(vector<int>& nums){
+  int len = nums.size();
+  int maxSum = INT_MIN, sum = 0;
+  int startS = 0, endS = 0;
+  vector<int> maxArray;
 
-        for(int i = 0; i < len; i++){
-            if(sum == 0){
-                strt = i;
-            }
-            sum += nums[i];
-            if(sum > maxSum){
-                maxSum = max(maxSum, sum);
-                startS = strt;
-                endS = i;
-            }
-            
-            if(sum < 0)sum = 0;
-        }
-        cout << "Max Sum is : " << maxSum << endl;
-
-        vector<int> maxSubArray;
-
-        for(int i = startS; i <= endS; i++){
-            maxSubArray.push_back(nums[i]);
-        }
-        
-        return maxSubArray;
+  for(int i = 0; i < len; i++){
+    sum += nums[i];
+    if(sum > maxSum){
+      maxSum = sum;
+      endS = i;
     }
+    if(sum < 0){
+      sum = 0;
+      startS = i+1;
+    }
+  }
+  cout << "Max Sum is : " << maxSum << endl;
+  for(int i = startS; i <= endS; i++){
+    maxArray.push_back(nums[i]);
+  }
+  return maxArray;
+}
+
+
+// vector<int> maxSubArray(vector<int>& nums) {
+//         int len = nums.size();
+//         int maxSum = INT_MIN, sum = 0;
+//         int startS = -1, endS = -1, strt = 0;
+
+//         for(int i = 0; i < len; i++){
+//             if(sum == 0){
+//                 strt = i;
+//             }
+//             sum += nums[i];
+//             if(sum > maxSum){
+//                 maxSum = max(maxSum, sum);
+//                 startS = strt;
+//                 endS = i;
+//             }
+            
+//             if(sum < 0)sum = 0;
+//         }
+//         cout << "Max Sum is : " << maxSum << endl;
+
+//         vector<int> maxSubArray;
+
+//         for(int i = startS; i <= endS; i++){
+//             maxSubArray.push_back(nums[i]);
+//         }
+        
+//         return maxSubArray;
+//     }
 int main()
 {
 
