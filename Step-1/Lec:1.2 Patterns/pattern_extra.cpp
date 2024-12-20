@@ -10,15 +10,25 @@ A B C D
 #include<bits/stdc++.h>
 using namespace std;
 
-void alphaTriangle(int n) {
-    for(int i = 0; i < n; i++){
-    char ch = 'A';
-        for(char j = 'A' + (n-i-1); j <= 'A' + (n-1); j++){
+void alphaTriangle(int num){
+    for(int i = 1; i <= num; i++){
+        char ch = 'A';
+        for(char j = 'A'+(num-i); j <= 'A'+(num-1); j++){
             cout << j << " ";
         }
         cout << endl;
     }
 }
+
+// void alphaTriangle(int n) {
+//     for(int i = 0; i < n; i++){
+//     char ch = 'A';
+//         for(char j = 'A' + (n-i-1); j <= 'A' + (n-1); j++){
+//             cout << j << " ";
+//         }
+//         cout << endl;
+//     }
+// }
 
 int main()
 {
