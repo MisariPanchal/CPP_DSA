@@ -21,17 +21,22 @@ using namespace std;
 
 void zigzag(int n){
 
-    for(int k = 1; k <= n; k++){
-        for(int i = 1; i < 2*n-1; i++){
-            int stars = (i<=n)?i:(2*n-i);
-            for(int j = 1; j <= stars; j++){
-                if(j==stars)cout << "* ";
-                else cout << " ";
-            }
-            cout << endl;
-        }
+    for(int i = 0; i < 2*(n-1)*n+1; i++){
+        int div = 2*(n-1);
+        int rem = i % div;
+        int space;
+         if(rem<=n-1){
+            space = rem;
+         }
+         else{
+            space = 2*(n-1)-rem;
+         }
+         for(int j = 0; j < space; j++){
+            cout << " ";
+         }
+         cout << "*" << endl;
+
     }
-    cout << "* ";
 }
 
 int main()
