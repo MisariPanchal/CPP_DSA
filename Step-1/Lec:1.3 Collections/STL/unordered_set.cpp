@@ -33,7 +33,7 @@ int main(){
     // auto it = us.lower_bound(10);
     // cout << "Lower bound of 10 whose immediate greater element is not present : " << *it << endl;
 
-    //All other functions are similar to vector
+    //All other functions are similar to set
 
     return 0;
 

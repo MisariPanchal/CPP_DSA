@@ -1,13 +1,3 @@
-* 
- * 
-  * 
- * 
-* 
- * 
-  * 
- * 
-* 
- * 
-  * 
- * 
-* 
+Permutaions before sorting: 231, 312, 321, 
+Sorted numbered string : 123
+Permutaions after sorting : 123, 132, 213, 231, 312, 321, 

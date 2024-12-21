@@ -12,6 +12,8 @@ int main(){
 
     stack<int> st1;
 
+    // cout << *st1.begin() << endl;
+
     //Adding elements
     st1.push(3);
     st1.push(9);

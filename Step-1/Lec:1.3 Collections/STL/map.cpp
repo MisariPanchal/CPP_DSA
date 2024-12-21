@@ -13,6 +13,7 @@ int main(){
 
     mp1[13] = 1;
     mp1.insert({1,2});
+    mp1.insert({5,2});
     mp1.emplace(2,2);
 
     cout << "Elements of Map 1 : ";

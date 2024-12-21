@@ -10,6 +10,8 @@ int main(){
     //sorted, unique
     set<int> dsa_set = {1,2,4};
 
+    // cout << *dsa_set.begin()+1 << endl;
+
     dsa_set.insert(3);
     dsa_set.insert(5);
     dsa_set.insert(3);
@@ -22,7 +24,7 @@ int main(){
 
     //if the set does not contain the element it returns garbage value
     auto it2 = dsa_set.find(9);
-    // cout << "If element not present (garbage value) : " << *it1 <<endl;
+    cout << "If element present (returns the same element) : " << *it1 <<endl;
     cout << "If element not present (total num of elements) : " << *it2 <<endl;
 
     cout << "Unique elements of set : ";
@@ -47,7 +49,7 @@ int main(){
     cout << dsa_set.count(30) << endl;
 
     //erasing series of elements
-    set<int> dsa_set1 = {1,2,3,4,5,6,7};
+    set<int> dsa_set1 = {1,2,4,3,7,5,6};
     dsa_set1.erase(dsa_set1.find(2), dsa_set1.find(5));
 
     cout << "Unique elements of set after erasing couple of elements : ";

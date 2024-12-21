@@ -9,6 +9,8 @@ int main(){
 
     deque<int> dq = {1};
 
+    // cout << dq[0] << endl;
+
     //Adding elements
     dq.push_back(2);
     dq.emplace_back(3);

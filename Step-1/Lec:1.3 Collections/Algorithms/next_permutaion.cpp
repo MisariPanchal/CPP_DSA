@@ -8,21 +8,23 @@ int main(){
         freopen("../../../output.txt","w",stdout);
     #endif
 
-    string s = "231";
+    string s1 = "231";
 
     cout << "Permutaions before sorting: ";
     do{
-        cout << s << ", ";
-    }while(next_permutation(s.begin(), s.end()));
+        cout << s1 << ", ";
+    }while(next_permutation(s1.begin(), s1.end()));
     cout << endl;
 
-    sort(s.begin(), s.end());
-    cout << "Sorted numbered string : " << s << endl;
+    string s2 = "231";
+
+    sort(s2.begin(), s2.end());
+    cout << "Sorted numbered string : " << s2 << endl;
 
     cout << "Permutaions after sorting : ";
     do{
-        cout << s << ", ";
-    }while(next_permutation(s.begin(), s.end()));
+        cout << s2 << ", ";
+    }while(next_permutation(s2.begin(), s2.end()));
     cout << endl;
 
     return 0;

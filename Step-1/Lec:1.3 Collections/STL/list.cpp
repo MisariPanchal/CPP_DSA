@@ -9,9 +9,13 @@ int main(){
 
     list<int> ls = {1,2,4};
 
+    // cout << ls[1];
+    // cout << *ls.begin() << endl;
+
     //Adding elements
     ls.push_back(2);
     ls.emplace_back(5);
+
 
     ls.push_front(10);
     ls.emplace_front(9);
