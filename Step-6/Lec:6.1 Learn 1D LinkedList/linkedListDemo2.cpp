@@ -20,13 +20,13 @@ struct Node{
 Node* convertArrayToLL(vector<int> &arr){
     Node* head = new Node(arr[0], nullptr);
     Node* temp = head;
+    
 
     for(int i = 1; i <= arr.size(); i++){
         Node* newNode = new Node(arr[i], nullptr);
         temp->next = newNode;
         temp = newNode;
     }
-    
 
     return head;
 }
@@ -46,7 +46,7 @@ int lengthOfLL(Node* head){
 bool search(Node* head, int target){
     Node* current = head;
 
-    while(current->next != nullptr){
+    while(current != nullptr){
         if(current->data == target)return true;
         current = current->next;
     }
@@ -86,6 +86,7 @@ int main()
     cout << "Is element 22 present in Linkedlist : " << search(head, 22) << endl;
     cout << "Is element 2 present in Linkedlist : " << search(head, 2) << endl;
     cout << "Is element 27 present in Linkedlist : " << search(head, 27) << endl;
-    cout << "Is element 14 present in Linkedlist : " << search(head, 1) << endl;
+    cout << "Is element 1 present in Linkedlist : " << search(head, 1) << endl;
+    cout << "Is element 8 present in Linkedlist : " << search(head, 8) << endl;
 
 }
