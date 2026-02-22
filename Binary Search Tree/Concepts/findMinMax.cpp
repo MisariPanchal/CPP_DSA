@@ -1,16 +1,18 @@
-#include <iostream>
+#include <bits/stdc++.h>
 using namespace std;
 
-struct TreeNode {
+struct TreeNode
+{
     int val;
-    TreeNode* left;
-    TreeNode* right;
+    TreeNode *left;
+    TreeNode *right;
 
     TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
 };
 
 // Insert into BST
-TreeNode* insertNode(TreeNode* root, int val) {
+TreeNode *insertNode(TreeNode *root, int val)
+{
     if (root == nullptr)
         return new TreeNode(val);
 
@@ -23,23 +25,34 @@ TreeNode* insertNode(TreeNode* root, int val) {
 }
 
 // Find Minimum in BST
-TreeNode* findMin(TreeNode* root) {
-    if (root == nullptr) return nullptr;
+TreeNode *findMin(TreeNode *root)
+{
+    if (root == nullptr)
+        return nullptr;
     while (root->left != nullptr)
         root = root->left;
     return root;
 }
 
 // Find Maximum in BST
-TreeNode* findMax(TreeNode* root) {
-    if (root == nullptr) return nullptr;
+TreeNode *findMax(TreeNode *root)
+{
+    if (root == nullptr)
+        return nullptr;
     while (root->right != nullptr)
         root = root->right;
     return root;
 }
 
-int main() {
-    TreeNode* root = nullptr;
+int main()
+{
+
+#ifndef ONLINE_JUDGE
+    freopen("../../input.txt", "r", stdin);
+    freopen("../../output.txt", "w", stdout);
+#endif
+
+    TreeNode *root = nullptr;
 
     // Insert elements
     root = insertNode(root, 50);
@@ -50,8 +63,8 @@ int main() {
     root = insertNode(root, 60);
     root = insertNode(root, 80);
 
-    TreeNode* minNode = findMin(root);
-    TreeNode* maxNode = findMax(root);
+    TreeNode *minNode = findMin(root);
+    TreeNode *maxNode = findMax(root);
 
     if (minNode)
         cout << "Minimum value in BST: " << minNode->val << endl;
